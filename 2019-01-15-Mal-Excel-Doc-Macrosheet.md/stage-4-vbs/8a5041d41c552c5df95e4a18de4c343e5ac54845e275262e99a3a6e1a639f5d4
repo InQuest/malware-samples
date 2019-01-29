@@ -1,0 +1,1 @@
+CreateObject("WScript.shell").run "cmd /c %temp%\help.bat", 0, False
